@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Mudragada — AI GTM Engineer</title>
+  <meta name="description" content="I build the growth systems that sit behind go-to-market: signal detection, enrichment, automation, and the outbound that turns accounts into meetings. Distribution is an engineering problem — I solve it." />
+  <meta property="og:title" content="Sai Mudragada — AI GTM Engineer" />
+  <meta property="og:description" content="Signal → Enrich → Qualify → Outbound → Meeting. I build the pipes and write the words that move through them." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======= NAV ======= -->
+  <header class="nav">
+    <a class="nav-logo" href="#top">
+      <span class="logo-dot" aria-hidden="true"></span>
+      <span class="logo-name">sai mudragada</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#system">System</a>
+      <a href="#proof">Proof</a>
+      <a href="#builds">Builds</a>
+      <a href="#work">Work</a>
+      <a href="#words">Words</a>
+    </nav>
+    <a class="nav-cta" href="mailto:saimudragada1012@gmail.com">
+      <span class="pulse-dot" aria-hidden="true"></span> Available
+    </a>
+  </header>
+
+  <main id="top">
+
+    <!-- ======= HERO ======= -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow mono reveal">// AI GTM ENGINEER · KANSAS CITY, MO</p>
+        <h1 class="hero-title reveal">
+          Distribution is an<br />
+          engineering problem.<br />
+          <em>I build the systems<br />that solve it.</em>
+        </h1>
+        <p class="hero-sub reveal">
+          Signal detection that finds the right accounts. Enrichment and automation
+          that qualify them. Outbound that turns them into meetings — and the
+          words inside every message. I own the pipes <em>and</em> what flows through them.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#system">See the system</a>
+          <a class="btn btn-ghost" href="mailto:saimudragada1012@gmail.com">Start a conversation</a>
+        </div>
+      </div>
+
+      <!-- Animated signal pipeline -->
+      <div class="pipeline reveal" aria-hidden="true">
+        <div class="pipeline-track">
+          <div class="pipe-node" data-step="01"><span>Signal</span></div>
+          <div class="pipe-link"><i class="pipe-pulse"></i></div>
+          <div class="pipe-node" data-step="02"><span>Enrich</span></div>
+          <div class="pipe-link"><i class="pipe-pulse d1"></i></div>
+          <div class="pipe-node" data-step="03"><span>Qualify</span></div>
+          <div class="pipe-link"><i class="pipe-pulse d2"></i></div>
+          <div class="pipe-node" data-step="04"><span>Outbound</span></div>
+          <div class="pipe-link"><i class="pipe-pulse d3"></i></div>
+          <div class="pipe-node is-end" data-step="05"><span>Meeting</span></div>
+        </div>
+      </div>
+
+      <!-- Live system log -->
+      <div class="syslog mono reveal" role="presentation">
+        <div class="syslog-head">
+          <span class="pulse-dot"></span> gtm-engine · live
+        </div>
+        <div class="syslog-body" id="syslog"></div>
+      </div>
+    </section>
+
+    <!-- ======= 01 / THE SYSTEM ======= -->
+    <section class="section" id="system">
+      <div class="section-head reveal">
+        <p class="kicker mono">01 / THE SYSTEM</p>
+        <h2>One pipeline, from first signal<br />to booked meeting.</h2>
+        <p class="section-sub">
+          This is the architecture I've shipped in production — at Belkins for B2B
+          clients, and from zero as the founding GTM hire at a venture-backed startup.
+          Every node is something I've built, broken, and rebuilt until it ran on its own.
+        </p>
+      </div>
+
+      <div class="flow">
+        <article class="flow-node reveal">
+          <div class="flow-top">
+            <span class="flow-icon" aria-hidden="true">◉</span>
+            <span class="flow-step mono">/01</span>
+          </div>
+          <h3>Signal</h3>
+          <p>Intent detection before the market moves — funding events, hiring
+             spikes, product signals, first-party visits. The right account,
+             found early.</p>
+          <p class="flow-tools mono">Koala · Clay signals · custom APIs</p>
+        </article>
+
+        <article class="flow-node reveal">
+          <div class="flow-top">
+            <span class="flow-icon" aria-hidden="true">◈</span>
+            <span class="flow-step mono">/02</span>
+          </div>
+          <h3>Enrich</h3>
+          <p>Waterfall enrichment turns a raw signal into a qualified account —
+             firmographics, tech stack, buying committee — with AI agent steps
+             filling the gaps.</p>
+          <p class="flow-tools mono">Clay waterfalls · AI agent steps</p>
+        </article>
+
+        <article class="flow-node reveal">
+          <div class="flow-top">
+            <span class="flow-icon" aria-hidden="true">⬡</span>
+            <span class="flow-step mono">/03</span>
+          </div>
+          <h3>Sync</h3>
+          <p>Dedupe and upsert logic keeps the CRM clean. Records never
+             duplicate, never go stale. Data integrity is a feature, not
+             an afterthought.</p>
+          <p class="flow-tools mono">HubSpot · Salesforce · SQL · Python</p>
+        </article>
+
+        <article class="flow-node reveal">
+          <div class="flow-top">
+            <span class="flow-icon" aria-hidden="true">✎</span>
+            <span class="flow-step mono">/04</span>
+          </div>
+          <h3>Message</h3>
+          <p>LLM-generated, account-specific outreach — researched and
+             relevancy-first, never volume-first. I write the voice the
+             system speaks in.</p>
+          <p class="flow-tools mono">Claude · ChatGPT API · n8n</p>
+        </article>
+
+        <article class="flow-node is-end reveal">
+          <div class="flow-top">
+            <span class="flow-icon" aria-hidden="true">◎</span>
+            <span class="flow-step mono">/05</span>
+          </div>
+          <h3>Meeting</h3>
+          <p>Structured handoff to sales with full account context. MEDDIC
+             qualification — economic buyers and champions identified before
+             the first call.</p>
+          <p class="flow-tools mono">MEDDIC · CRM context engine</p>
+        </article>
+      </div>
+
+      <p class="flow-caption mono reveal">↳ every stage automated · every message human-grade</p>
+    </section>
+
+    <!-- ======= 02 / PROOF ======= -->
+    <section class="section" id="proof">
+      <div class="section-head reveal">
+        <p class="kicker mono">02 / PROOF</p>
+        <h2>Systems that ship numbers,<br />not slideware.</h2>
+      </div>
+
+      <div class="metrics">
+        <div class="metric reveal">
+          <p class="metric-value"><span class="count" data-target="11" data-suffix="%">0%</span></p>
+          <p class="metric-label">reply rate, up from 3% in three months — GPU &amp; cloud
+             infrastructure client, one deep ICP, relevancy over volume.</p>
+        </div>
+        <div class="metric reveal">
+          <p class="metric-value"><span class="count" data-target="13" data-suffix="%">0%</span></p>
+          <p class="metric-label">reply rate, up from under 4% in ten weeks — founding GTM
+             build at Intake, LLM-personalized outreach at scale.</p>
+        </div>
+        <div class="metric reveal">
+          <p class="metric-value"><span class="count" data-target="40" data-prefix="+" data-suffix="%">+0%</span></p>
+          <p class="metric-label">organic pipeline contribution over twelve months across
+             eight simultaneous B2B SaaS clients.</p>
+        </div>
+        <div class="metric reveal">
+          <p class="metric-value"><span class="count" data-target="5" data-suffix=" wks">0 wks</span></p>
+          <p class="metric-label">from zero to the first fully automated outbound workflow
+             as a founding GTM hire.</p>
+        </div>
+        <div class="metric metric-wide reveal">
+          <p class="metric-value mono">2 people <span class="arrow">→</span> output of 6</p>
+          <p class="metric-label">what signal-based automation did for a two-person team:
+             matched accounts detected, enriched, and routed into personalized
+             outreach without a human in the loop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 03 / BUILDS ======= -->
+    <section class="section" id="builds">
+      <div class="section-head reveal">
+        <p class="kicker mono">03 / BUILDS</p>
+        <h2>Tools that give teams leverage<br />they didn't have before.</h2>
+      </div>
+
+      <div class="builds-grid">
+        <article class="build-card reveal">
+          <p class="build-tag mono">AGENT EVAL · GEO / AEO</p>
+          <h3>AgentReady</h3>
+          <p>Built at Profound's Marketing Engineering Hackathon. Audits how a
+             brand's content actually performs when ChatGPT, Claude, or Perplexity
+             generate answers about it — Generative Engine Optimization applied to
+             a live agent-evaluation problem.</p>
+          <p class="build-meta mono">↳ profound hackathon</p>
+        </article>
+
+        <article class="build-card reveal">
+          <p class="build-tag mono">INTERNAL PLATFORM · MARKETING</p>
+          <h3>Content Ops Platform</h3>
+          <p>One shared space to draft, edit, and publish across channels — with a
+             brand-voice file the AI checks every generation against, permission
+             controls, and a full content calendar. On-brand by construction.</p>
+          <p class="build-meta mono">↳ shipped at belkins</p>
+        </article>
+
+        <article class="build-card reveal">
+          <p class="build-tag mono">INTERNAL TOOL · SALES</p>
+          <h3>CRM Context Engine</h3>
+          <p>Pulls and summarizes full account history automatically, so reps walk
+             into every call prepared instead of digging through records. Context
+             as a service, delivered before it's needed.</p>
+          <p class="build-meta mono">↳ shipped at belkins</p>
+        </article>
+
+        <article class="build-card reveal">
+          <p class="build-tag mono">AUTONOMOUS AGENT · PAID</p>
+          <h3>Ad Spend Sentinel</h3>
+          <p>An LLM agent that monitors ad performance against a predefined goal,
+             automatically pauses underperforming spend, and posts a Slack
+             recommendation on where to reallocate it. Budget that defends itself.</p>
+          <p class="build-meta mono">↳ shipped at intake</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======= 04 / WORK ======= -->
+    <section class="section" id="work">
+      <div class="section-head reveal">
+        <p class="kicker mono">04 / WORK</p>
+        <h2>Zero-to-one, more than once.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <p class="tl-date mono">2025 — NOW</p>
+          <div class="tl-body">
+            <h3>AI GTM Engineer · Belkins</h3>
+            <p>Own the technical GTM systems behind outbound and ABM across multiple
+               B2B clients. Built the full signal-to-CRM pipeline — intent signals into
+               Clay waterfall enrichment into HubSpot with dedupe and upsert logic.
+               Took a GPU/cloud client from 3% to 11%+ reply rates in three months.
+               Partner directly with sales on MEDDIC qualification; pull warehouse
+               data with SQL and shape it with Python when exports aren't enough.</p>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <p class="tl-date mono">2024 — 2025</p>
+          <div class="tl-body">
+            <h3>Founding GTM Engineer · Intake (Mise)</h3>
+            <p>First GTM hire at a GrowX-backed startup building an AI kitchen agent.
+               Defined the ICP across three buyer segments, shipped the first automated
+               outbound workflow in five weeks, and built Clay + Koala signal detection
+               that routed matched accounts into personalized outreach. Integrated the
+               ChatGPT API directly into the workflow; ran paid across Google and Meta
+               with six message angles under A/B test.</p>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <p class="tl-date mono">2022 — 2023</p>
+          <div class="tl-body">
+            <h3>Product Marketing Analyst · GrowthSpree</h3>
+            <p>Managed content and demand generation for eight B2B SaaS clients
+               simultaneously — CAC and LTV tracking across paid and organic to guide
+               budget, +40% organic pipeline contribution in twelve months, and
+               go-to-market ownership for five product launches from positioning
+               to channel strategy.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="creds reveal">
+        <p class="mono">CLAUDE 101 — ANTHROPIC</p>
+        <p class="mono">POWER BI DATA ANALYST (PL-300) — MICROSOFT</p>
+        <p class="mono">MBA, BUSINESS ANALYTICS — MIDWESTERN STATE</p>
+        <p class="mono">B.E. ELECTRICAL &amp; ELECTRONICS — RVR&amp;JC</p>
+      </div>
+    </section>
+
+    <!-- ======= 05 / WORDS ======= -->
+    <section class="section" id="words">
+      <div class="section-head reveal">
+        <p class="kicker mono">05 / THE WORDS</p>
+        <h2>The system delivers the message.<br />The writing makes it land.</h2>
+        <p class="section-sub">
+          Content and automation are the same discipline: the right message to the
+          right person at the right moment. One through systems, one through
+          writing. I do both — ad concepts, campaign scripts, LinkedIn, and
+          GEO/AEO content built for an AI-answer-driven search landscape.
+        </p>
+      </div>
+
+      <!-- Billboard concept, rebuilt in CSS -->
+      <figure class="billboard-wrap reveal">
+        <div class="billboard">
+          <p class="billboard-copy">
+            The world changed<br />
+            how it finds things.<br />
+            We'll make sure<br />
+            they find you.
+          </p>
+          <p class="billboard-brand mono">◒ Profound</p>
+        </div>
+        <figcaption class="mono">
+          ↳ Spec billboard concept created for Profound — one of the ad concepts,
+          scripts, and campaigns I design alongside the systems work.
+        </figcaption>
+      </figure>
+
+      <div class="words-grid">
+        <div class="word-chip reveal"><span class="mono">/</span> Ad scripts &amp; campaign concepts</div>
+        <div class="word-chip reveal"><span class="mono">/</span> LinkedIn &amp; long-form brand content</div>
+        <div class="word-chip reveal"><span class="mono">/</span> GEO &amp; AEO — content that wins AI answers</div>
+        <div class="word-chip reveal"><span class="mono">/</span> Email &amp; nurture sequences</div>
+      </div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section class="section contact" id="contact">
+      <div class="contact-inner reveal">
+        <p class="kicker mono">06 / SIGNAL ME</p>
+        <h2>Have a distribution problem?</h2>
+        <p class="section-sub">
+          If growth at your company still depends on manual, tedious processes —
+          that's the exact moment I like to show up. Let's replace it with
+          something that runs on its own and actually works.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:saimudragada1012@gmail.com">saimudragada1012@gmail.com</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/saimudragada" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="mono">© 2026 SAI MUDRAGADA · BUILT LIKE EVERYTHING ELSE I SHIP — BY HAND, THEN AUTOMATED</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
