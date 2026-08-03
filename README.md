@@ -7,28 +7,35 @@ through those systems.
 
 **Live site:** deployed on Vercel.
 
-## Design concept
+## Design concept — "The Field Manual"
 
-The site is built around one idea: *the portfolio behaves like one of the
-systems it describes.*
+An editorial, print-inspired working document instead of the usual dark-tech
+portfolio: warm paper canvas, ink-black Fraunces display serif, blue ballpoint
+annotations with hand-drawn arrows, a highlighter-yellow marker sweep, and a
+vermillion rubber stamp. The page reads like an engineer's field manual that a
+copywriter got their hands on — which is exactly the positioning.
 
-- **Hero pipeline** — an animated `SIGNAL → ENRICH → QUALIFY → OUTBOUND → MEETING`
-  flow with light pulses traveling between nodes.
-- **Live system log** — a looping, typed terminal feed showing a signal getting
-  detected, enriched, upserted into HubSpot, messaged, and answered.
-- **The System** — a five-node flowchart of the real production architecture
-  (Koala/Clay signals → Clay waterfalls → HubSpot dedupe/upsert → LLM messaging
-  → MEDDIC handoff).
-- **Proof** — count-up metrics from real deployments (3%→11% and 4%→13% reply
-  rates, +40% organic pipeline, zero-to-workflow in 5 weeks).
-- **Builds** — AgentReady (Profound hackathon), Content Ops Platform, CRM
-  Context Engine, Ad Spend Sentinel.
-- **The Words** — the creative side: a CSS-rebuilt spec billboard concept for
-  Profound, ad scripts, LinkedIn content, and GEO/AEO writing.
+- **Hero** — oversized editorial headline ("I build growth systems* that book
+  meetings while you sleep.") with a blue-pen margin note pointing at the
+  asterisk, and a footnote that owns both halves of the craft.
+- **The receipt** — the system log rendered as a zigzag-edged till receipt:
+  a real morning (signal → enrich → upsert → draft → reply), typed live.
+- **01 / The machine** — the production pipeline drawn as a blueprint schematic
+  on grid paper: five blue-ink nodes, dashed connectors, pen annotations.
+- **02 / The ledger** — metrics as an audited ledger with giant serif numerals
+  (3%→11%, 4%→13%, +40%, 5 wks, 6×).
+- **03 / The shipping log** — internal tools as numbered log entries that
+  invert to ink-on-black on hover.
+- **04 / Service record** — Belkins, Intake (Mise), GrowthSpree with oversized
+  italic year numerals.
+- **05 / The words** — the Profound spec billboard presented as a poster taped
+  to the page (washi tape, slight rotation), plus the writing practice.
+- **06 / Contact** — "Got a distribution problem? Good." with a rubber
+  OPEN-TO-WORK stamp.
 
-Visual language: near-black canvas, a single signal-green accent (`#45e08c`),
-Space Grotesk display type, JetBrains Mono system annotations, and a faint
-engineering grid — modern, futuristic, deliberately uncrowded.
+Type: Fraunces (900/italic display) · Archivo (body) · IBM Plex Mono
+(annotations). Palette: paper `#f4f0e6`, ink `#191713`, pen blue `#1d3fc4`,
+vermillion `#e8501a`, marker `#f6e25c`.
 
 ## Stack
 
