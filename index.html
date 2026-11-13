@@ -1,300 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sai Mudragada — AI GTM Engineer</title>
-  <meta name="description" content="I build the growth systems that sit behind go-to-market — signal detection, enrichment, automated outbound — and write every word that moves through them." />
-  <meta property="og:title" content="Sai Mudragada — AI GTM Engineer" />
-  <meta property="og:description" content="Growth systems that book meetings while you sleep. The pipes and the words that move through them." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600;1,9..144,900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sai Mudragada, GTM Engineer in the Kansas City area. Clay, CRM, signals and AI workflows.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Sai Mudragada</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: a calm, warm single column with wide figure rows. Each piece of work carries a small live graphic
+   (agent reply, signal feed, data freshness curve). Deliberately one light, warm theme. */
+:root{
+  color-scheme:light;
+  --paper:#fffaf3; --card:#ffffff; --ink:#2b2320; --muted:#7a6b63; --line:#f0e2d4;
+  --apricot:#ef8a4c; --apricot-ink:#b5541c; --apricot-soft:#ffe6d6;
+  --butter:#ffe9b3; --butter-soft:#fff4d8;
+  --sage:#6aa77a; --sage-ink:#2f7444; --sage-soft:#e3f1e3;
+  --sky-soft:#e3eef6;
+  --display:"Bricolage Grotesque","Avenir Next",system-ui,sans-serif;
+  --body:"Figtree","Helvetica Neue",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --hand:"Caveat","Bradley Hand",cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6;overflow-x:hidden;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:1080px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);line-height:1.06;letter-spacing:-.02em;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--apricot-ink)}
+.label{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.hand{font-family:var(--hand);font-size:22px;color:var(--apricot-ink);line-height:1.1}
+.mono{font-family:var(--mono)}
+:focus-visible{outline:2px solid var(--apricot);outline-offset:3px;border-radius:6px}
+button{font:inherit;color:inherit}
+
+/* nav */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px}
+.brand{display:flex;align-items:center;gap:10px;font:800 19px var(--display);text-decoration:none;color:var(--ink)}
+.mark{width:30px;height:30px;border-radius:10px;background:var(--apricot);display:grid;place-items:center;color:#fff;font:800 15px var(--display);transform:rotate(-6deg);transition:transform .3s}
+.brand:hover .mark{transform:rotate(6deg)}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500;padding:6px 12px;border-radius:999px}
+.nav a:hover{background:var(--butter-soft)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;padding-block:44px 56px}
+.hero>*{min-width:0}
+.meta{display:flex;gap:10px;flex-wrap:wrap}
+.tag{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--mono);background:var(--card);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.tag .live{width:8px;height:8px;border-radius:50%;background:var(--sage);animation:beat 2.2s infinite}
+@keyframes beat{0%{box-shadow:0 0 0 0 rgba(106,167,122,.5)}100%{box-shadow:0 0 0 9px rgba(106,167,122,0)}}
+.hero h1{font-size:clamp(44px,7vw,84px);font-weight:800;margin-top:22px}
+.hero h1 .role{display:block;color:var(--muted);font-weight:600;font-size:.42em;letter-spacing:-.01em;margin-top:10px}
+.lede{font-size:20px;max-width:30em;margin-top:22px}
+.hl{position:relative;z-index:0;white-space:nowrap}
+.hl::after{content:"";position:absolute;left:-3px;right:-3px;bottom:.1em;height:.38em;border-radius:5px;background:var(--butter);z-index:-1;transform-origin:left;animation:mark .9s .4s cubic-bezier(.6,0,.2,1) both}
+.hl.b::after{background:var(--apricot-soft);animation-delay:.8s}
+@keyframes mark{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px var(--body);padding:11px 18px;border-radius:12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.sm{font-size:13.5px;padding:8px 13px;border-radius:10px}
+
+/* hero pipeline */
+.pipe-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 20px 44px -30px rgba(120,70,30,.45)}
+.pipe-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.count{font:500 13px var(--mono);color:var(--muted)}
+.count b{font:800 20px var(--display);color:var(--ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.pipe{position:relative;display:flex;flex-direction:column;gap:10px;padding-left:40px}
+.rail{position:absolute;left:17px;top:20px;bottom:20px;width:2px;background:repeating-linear-gradient(to bottom,var(--line) 0 5px,transparent 5px 10px)}
+.node{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:13px;background:var(--paper);border:1px solid var(--line);position:relative;transition:transform .3s,background .3s}
+.node::before{content:"";position:absolute;left:-29px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--card);border:2px solid var(--line);transition:all .3s}
+.node.ping{transform:translateX(3px)}
+.node.ping::before{background:var(--apricot);border-color:var(--apricot)}
+.node.last.ping{background:var(--sage-soft)}
+.node .g{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font:500 12px var(--mono);flex:none}
+.node b{font-weight:600;font-size:14.5px;display:block;line-height:1.2}
+.node small{color:var(--muted);font-size:12.5px}
+.lead{position:absolute;left:12px;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--apricot);pointer-events:none;transition:opacity .4s,left .5s}
+.lead.cold{background:#c6b6a8}
+.lead.out{left:-10px;opacity:0}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-block:1px solid var(--line)}
+.num{padding:26px 22px;border-right:1px solid var(--line);min-width:0}
+.num:last-child{border-right:0}
+.num b{display:block;font:800 clamp(30px,3.6vw,42px) var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+.num span{display:block;font-size:14px;color:var(--muted);margin-top:8px}
+
+/* sections */
+section{padding-block:72px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.sec-head h2{font-size:clamp(32px,4.6vw,48px);font-weight:800;margin-top:6px}
+
+/* featured work */
+.work{display:flex;flex-direction:column;gap:22px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,40px)}
+.feat>*{min-width:0}
+.feat:nth-child(even) .fig{order:-1}
+.feat h3{font-size:clamp(24px,3vw,32px);font-weight:800;margin-top:8px}
+.feat p{color:var(--muted);margin-top:14px}
+.feat p strong{color:var(--ink);font-weight:600}
+.result{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:500 13.5px var(--mono);background:var(--sage-soft);color:var(--sage-ink);padding:6px 12px;border-radius:999px}
+.tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.tools span{font:500 12px var(--mono);padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.fig{border-radius:18px;padding:20px;min-width:0}
+.fig.a{background:var(--butter-soft)} .fig.b{background:var(--apricot-soft)} .fig.c{background:var(--sky-soft)}
+
+/* slack mock */
+.slack{background:var(--card);border-radius:14px;border:1px solid var(--line);overflow:hidden;font-size:14px}
+.slack-h{padding:10px 14px;border-bottom:1px solid var(--line);font:500 12.5px var(--mono);color:var(--muted)}
+.sm{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:12px 14px}
+.sm>*{min-width:0}
+.av{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font:700 13px var(--display)}
+.av.rep{background:var(--butter)} .av.bot{background:var(--apricot);color:#fff}
+.sm .who{font-weight:700;font-size:13.5px}.sm .who small{font-weight:400;color:var(--muted);margin-left:6px}
+.at{color:var(--apricot-ink);background:var(--apricot-soft);border-radius:4px;padding:0 4px}
+.brief{display:grid;gap:6px;margin-top:6px}
+.brief div{display:grid;grid-template-columns:86px 1fr;gap:8px}
+.brief dt,.brief .k{font:500 11.5px var(--mono);color:var(--muted);padding-top:2px}
+.typing{display:none;gap:4px;padding:8px 0}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:bob 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes bob{50%{transform:translateY(-4px);opacity:.5}}
+.is-typing .typing{display:flex}.is-typing .brief,.is-typing .reply-t{display:none}
+
+/* signal feed */
+.feed{display:flex;flex-direction:column;gap:8px}
+.sig{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px;transition:transform .35s,border-color .35s,box-shadow .35s}
+.sig>*{min-width:0}
+.sig .k{font:500 11.5px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.sig.on{border-color:var(--apricot);transform:translateX(4px);box-shadow:-4px 0 0 var(--apricot)}
+.feed-out{margin-top:6px;display:flex;align-items:center;gap:10px;font:500 13px var(--mono);color:var(--sage-ink)}
+.feed-out i{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--sage) 0 6px,transparent 6px 10px);background-size:20px 2px;animation:flow 1s linear infinite}
+@keyframes flow{to{background-position:20px 0}}
+
+/* freshness chart */
+.chart{width:100%;display:block}
+.chart .grid{stroke:#d9cfc6;stroke-width:1}
+.chart text{font-family:var(--mono);font-size:10.5px;fill:#7a6b63}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:16px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.draw{stroke-dasharray:var(--len);stroke-dashoffset:0}
+.drawing .draw{animation:draw 2.2s ease forwards}
+@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+
+/* more work list */
+.more{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0;transition:transform .25s}
+.mini:hover{transform:translateY(-3px)}
+.mini h3{font-size:20px;font-weight:800}
+.mini p{color:var(--muted);font-size:15px}
+.bars{display:flex;flex-direction:column;gap:7px;margin-top:4px}
+.bar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--line)}
+.bar i{display:block;height:100%;transition:width 1.2s cubic-bezier(.3,.8,.3,1)}
+.bar .talk{background:#d8c6b6}.bar .listen{background:var(--sage)}
+.bar-l{display:flex;justify-content:space-between;font:500 11px var(--mono);color:var(--muted)}
+
+/* experience */
+.xp{display:flex;flex-direction:column}
+.job{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:30px 0;border-top:1px solid var(--line)}
+.job>*{min-width:0}
+.job:last-child{border-bottom:1px solid var(--line)}
+.when{font:500 13px var(--mono);color:var(--muted)}
+.where{font-size:14px;color:var(--muted);margin-top:4px}
+.job h3{font-size:26px;font-weight:800}
+.job .title{color:var(--apricot-ink);font-weight:600;margin-top:2px}
+.job ul{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.job li{position:relative;padding-left:20px;max-width:64ch}
+.job li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:3px;background:var(--butter);border:1.5px solid var(--apricot)}
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:26px}
+.edu div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.edu b{display:block;font-weight:600}
+.edu span{color:var(--muted);font-size:14.5px}
+
+/* toolkit */
+.kit{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.group{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}
+.group .label{display:block;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:500 13px var(--mono);padding:5px 10px;border-radius:999px;background:var(--paper);border:1px solid var(--line);transition:background .2s}
+.chips span:hover{background:var(--butter)}
+
+/* beyond */
+.beyond{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.b-card{border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.b-card.x{background:var(--butter-soft)}.b-card.y{background:var(--sage-soft)}.b-card.z{background:var(--apricot-soft)}
+.b-card h3{font-size:21px;font-weight:800}
+.b-card p{color:#5f524b;font-size:15px}
+.badge{align-self:flex-start;font:500 12px var(--mono);background:var(--card);padding:4px 10px;border-radius:999px}
+.orbit{width:46px;height:46px;position:relative}
+.orbit::before{content:"";position:absolute;inset:6px;border:1.5px dashed var(--sage-ink);border-radius:50%;opacity:.5}
+.orbit::after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--sage-ink);top:1px;left:18px;transform-origin:5px 22px;animation:spin 6s linear infinite}
+.orbit b{position:absolute;inset:16px;border-radius:50%;background:var(--apricot)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);border-radius:30px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end}
+.contact>*{min-width:0}
+.contact h2{font-size:clamp(34px,5vw,56px);font-weight:800}
+.contact h2 em{font-style:normal;color:var(--butter)}
+.contact p{color:#d8ccc3;margin-top:14px;max-width:34em}
+.lines{display:flex;flex-direction:column;gap:12px}
+.line-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #4a3e39;padding-bottom:12px;flex-wrap:wrap}
+.line-row .label{color:#b9aba2}
+.line-row a,.line-row span.v{color:var(--paper);font:500 15px var(--mono);word-break:break-all}
+.copy{font:500 12px var(--mono);color:var(--ink);background:var(--butter);border:0;border-radius:8px;padding:6px 10px;cursor:pointer}
+footer{padding-block:30px 48px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
+
+@media (max-width:900px){
+  .hero,.feat,.contact{grid-template-columns:1fr}
+  .feat:nth-child(even) .fig{order:0}
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .num:nth-child(2){border-right:0}
+  .num:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .more,.kit,.beyond{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .nav{display:none}
+  .more,.kit,.beyond,.edu{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:8px}
+  .brief div{grid-template-columns:1fr;gap:0}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
 </head>
 <body>
-
-  <!-- ======= TOP BAR ======= -->
-  <header class="topbar mono">
-    <span class="topbar-name">SAI&nbsp;MUDRAGADA</span>
-    <span class="topbar-item hide-sm">GTM&nbsp;SYSTEMS&nbsp;&amp;&nbsp;WORDS</span>
-    <span class="topbar-item hide-md">KANSAS&nbsp;CITY,&nbsp;MO</span>
-    <a class="topbar-status" href="mailto:saimudragada1012@gmail.com"><span class="blink">●</span>&nbsp;OPEN&nbsp;TO&nbsp;WORK</a>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top" id="top"><span class="mark">S</span>Sai Mudragada</a>
+    <nav class="nav" aria-label="Sections"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#toolkit">Toolkit</a><a href="#contact">Contact</a></nav>
   </header>
 
-  <main>
-
-    <!-- ======= HERO ======= -->
-    <section class="hero">
-      <p class="kicker mono reveal">FIELD MANUAL — AI GTM ENGINEER, DOC. N°01</p>
-
-      <h1 class="hero-title reveal">
-        I build growth
-        <span class="anno-wrap"><em>systems</em><span class="asterisk">*</span>
-          <svg class="anno-arrow" viewBox="0 0 100 44" aria-hidden="true">
-            <path d="M94 14 C 66 30, 36 32, 8 20" fill="none"/>
-            <path d="M22 14 L 8 20 L 20 30" fill="none"/>
-          </svg>
-          <span class="anno-note mono" aria-hidden="true">signal&nbsp;→&nbsp;meeting,<br/>no&nbsp;humans&nbsp;needed</span>
-        </span><br/>
-        that book meetings<br/>
-        <span class="hl">while you sleep.</span>
-      </h1>
-
-      <p class="footnote reveal"><span class="mono">*</span> and I write every word that moves through them. The pipes <em>and</em> the poetry — most people pick one. I never saw the difference.</p>
-
-      <div class="hero-facts reveal">
-        <div class="fact"><span class="fact-num serif">3<i>%</i>→11<i>%</i></span><span class="fact-label mono">REPLY RATE, 3 MONTHS<br/>GPU-CLOUD CLIENT</span></div>
-        <div class="fact"><span class="fact-num serif">0→1</span><span class="fact-label mono">FOUNDING GTM HIRE<br/>FIRST WORKFLOW IN 5 WKS</span></div>
-        <div class="fact"><span class="fact-num serif">2<i>→</i>6</span><span class="fact-label mono">TWO PEOPLE, OUTPUT OF SIX<br/>VIA SIGNAL AUTOMATION</span></div>
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <div class="meta">
+        <span class="tag"><span class="live"></span>Building at Belkins</span>
+        <span class="tag">Kansas City Metropolitan Area</span>
       </div>
-
-      <div class="hero-ctas reveal">
-        <a class="cta" href="#machine">See how the machine works <span class="cta-arrow">↓</span></a>
-        <a class="cta cta-alt" href="mailto:saimudragada1012@gmail.com">Write to me <span class="cta-arrow">↗</span></a>
-      </div>
-
-      <!-- receipt / system log -->
-      <div class="receipt-wrap reveal">
-        <div class="receipt" role="presentation">
-          <p class="receipt-head mono">GTM-ENGINE · RUN N°4021 · LIVE FEED</p>
-          <div class="receipt-body mono" id="syslog"></div>
-          <p class="receipt-foot mono">— NO HUMANS WERE INVOLVED IN THIS TRANSACTION —</p>
-        </div>
-        <p class="receipt-caption mono">↖ an actual morning, compressed to a receipt</p>
-      </div>
-    </section>
-
-    <!-- ======= TICKER ======= -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track mono">
-        <span>CLAY ✷ HUBSPOT ✷ N8N ✷ KOALA ✷ MEDDIC ✷ SQL ✷ PYTHON ✷ CLAUDE ✷ GEO / AEO ✷ WATERFALL ENRICHMENT ✷ DEDUPE &amp; UPSERT ✷ AD SCRIPTS ✷ RELEVANCY &gt; VOLUME ✷&nbsp;</span><span>CLAY ✷ HUBSPOT ✷ N8N ✷ KOALA ✷ MEDDIC ✷ SQL ✷ PYTHON ✷ CLAUDE ✷ GEO / AEO ✷ WATERFALL ENRICHMENT ✷ DEDUPE &amp; UPSERT ✷ AD SCRIPTS ✷ RELEVANCY &gt; VOLUME ✷&nbsp;</span>
+      <h1>Sai Mudragada<span class="role">GTM Engineer</span></h1>
+      <p class="lede">I build workflows that take great products to the <span class="hl">right audiences</span>, at the <span class="hl b">right moment</span>. Clay, CRM, signals and AI, wired into one system that reps actually use.</p>
+      <div class="cta">
+        <a class="btn solid" href="#work">See my work</a>
+        <a class="btn" href="https://www.linkedin.com/in/saimudragada" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
 
-    <!-- ======= 01 / THE MACHINE ======= -->
-    <section class="section" id="machine">
-      <div class="section-head">
-        <span class="section-no serif reveal">01</span>
-        <div class="section-title-wrap reveal">
-          <h2 class="serif">The machine.</h2>
-          <p class="section-sub">One pipeline, first signal to booked meeting. Drawn from production — Belkins, and a zero-to-one build at a venture-backed startup. Every box below is something I've built, broken, and rebuilt until it ran without me.</p>
-        </div>
+    <div class="pipe-card" aria-label="Animated sketch of a lead moving through a GTM workflow">
+      <div class="pipe-top"><span class="label">a workflow, running</span><span class="count"><b id="routed">0</b>reached</span></div>
+      <div class="pipe" id="pipe">
+        <div class="rail"></div>
+        <div class="node"><span class="g" style="background:var(--apricot-soft)">!</span><div><b>Signal</b><small>funding, hiring, job change</small></div></div>
+        <div class="node"><span class="g" style="background:var(--butter)">+</span><div><b>Enrich</b><small>waterfall across providers</small></div></div>
+        <div class="node"><span class="g" style="background:var(--sky-soft)">A</span><div><b>Score</b><small>low fit goes to nurture</small></div></div>
+        <div class="node"><span class="g" style="background:var(--butter-soft)">→</span><div><b>Route</b><small>right owner in the CRM</small></div></div>
+        <div class="node last"><span class="g" style="background:var(--sage-soft)">✓</span><div><b>Reach out</b><small>with context, within the hour</small></div></div>
       </div>
+    </div>
+  </div>
 
-      <div class="blueprint reveal">
-        <p class="blueprint-stamp mono">FIG. 1 — SIGNAL-TO-MEETING PIPELINE · AS BUILT</p>
-        <div class="bp-flow">
-          <div class="bp-node">
-            <span class="bp-step mono">01</span>
-            <h3 class="mono">SIGNAL</h3>
-            <p>Funding events, hiring spikes, first-party visits. The right account, found before the market moves.</p>
-            <span class="bp-tools mono">koala · clay signals</span>
-          </div>
-          <div class="bp-link" aria-hidden="true"><span class="bp-anno mono">intent detected</span></div>
-          <div class="bp-node">
-            <span class="bp-step mono">02</span>
-            <h3 class="mono">ENRICH</h3>
-            <p>Clay waterfalls turn a raw signal into a qualified account — firmographics, stack, buying committee.</p>
-            <span class="bp-tools mono">clay · ai agent steps</span>
-          </div>
-          <div class="bp-link" aria-hidden="true"><span class="bp-anno mono">37 fields resolved</span></div>
-          <div class="bp-node">
-            <span class="bp-step mono">03</span>
-            <h3 class="mono">SYNC</h3>
-            <p>Dedupe + upsert logic. Records never duplicate, never go stale. CRM hygiene as a feature.</p>
-            <span class="bp-tools mono">hubspot · sql · python</span>
-          </div>
-          <div class="bp-link" aria-hidden="true"><span class="bp-anno mono">0 duplicates</span></div>
-          <div class="bp-node">
-            <span class="bp-step mono">04</span>
-            <h3 class="mono">MESSAGE</h3>
-            <p>LLM-drafted, account-specific, relevancy-first. I write the voice the system speaks in.</p>
-            <span class="bp-tools mono">claude · gpt api · n8n</span>
-          </div>
-          <div class="bp-link" aria-hidden="true"><span class="bp-anno mono">relevancy 0.94</span></div>
-          <div class="bp-node bp-end">
-            <span class="bp-step mono">05</span>
-            <h3 class="mono">MEETING</h3>
-            <p>MEDDIC handoff with full context — economic buyer and champion flagged before the first call.</p>
-            <span class="bp-tools mono">meddic · crm context</span>
-          </div>
+  <!-- NUMBERS -->
+  <div class="nums" id="nums">
+    <div class="num"><b data-to="60" data-suf="%+">60%+</b><span>less manual prospect research</span></div>
+    <div class="num"><b>&lt; 1 hr</b><span>time-to-first-touch, down from days</span></div>
+    <div class="num"><b data-to="10" data-suf="+ hrs">10+ hrs</b><span>of pipeline ops saved every week</span></div>
+    <div class="num"><b data-to="95" data-suf="%+">95%+</b><span>inbox placement on high-volume sends</span></div>
+  </div>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="sec-head"><div><span class="label">selected work</span><h2>Things I've built</h2></div><span class="hand">small systems, big time savings</span></div>
+    <div class="work">
+
+      <article class="feat">
+        <div>
+          <span class="label">AI agent · Salesforce + Slack</span>
+          <h3>A context agent that briefs reps before every call</h3>
+          <p>Reps were spending their prep time digging through tabs. <strong>I built a context agent inside the sales CRM with Flows, actions and Prompt Builder.</strong> A rep mentions the agent in Slack and gets the full picture on an account in a structured template, so prep time goes into the conversation instead.</p>
+          <span class="result">↓ research time, ↑ time on calls</span>
+          <div class="tools"><span>Salesforce Flows</span><span>Prompt Builder</span><span>Slack</span><span>LLMs</span></div>
         </div>
-        <p class="blueprint-note mono">NOTE: every stage automated. every message human-grade. that's the whole trick.</p>
+        <div class="fig a">
+          <div class="slack" id="agent">
+            <div class="slack-h"># deal-prep</div>
+            <div class="sm"><span class="av rep">J</span><div><div class="who">Jordan <small>1:52 PM</small></div><p><span class="at">@context-agent</span> brief me on Northwind Freight before my 2pm</p></div></div>
+            <div class="sm"><span class="av bot">C</span><div><div class="who">context-agent <small>1:52 PM</small></div>
+              <div class="typing"><i></i><i></i><i></i></div>
+              <div class="brief">
+                <div><span class="k">company</span><span>Mid-market logistics, 400 people</span></div>
+                <div><span class="k">signals</span><span>New VP Sales last month, Series B in Q3</span></div>
+                <div><span class="k">history</span><span>Demo in March, stalled at pricing</span></div>
+                <div><span class="k">open with</span><span>How the new team is ramping reps</span></div>
+              </div>
+            </div></div>
+          </div>
+          <p class="mono" style="font-size:11.5px;color:var(--muted);margin-top:10px">example account, for illustration</p>
+        </div>
+      </article>
+
+      <article class="feat">
+        <div>
+          <span class="label">Signals · Clay + intent data</span>
+          <h3>Buying signals that reach a rep in under an hour</h3>
+          <p>Instead of renting another third-party signal tool, <strong>I built a custom Clay agent that watches target accounts for job changes and fundraising</strong>, and combined it with intent data from Bombora, Koala and RB2B. When something fires, sales and marketing act on it the same hour.</p>
+          <span class="result">days → under 1 hour to first touch</span>
+          <div class="tools"><span>Clay agent</span><span>Bombora</span><span>Koala</span><span>RB2B</span></div>
+        </div>
+        <div class="fig b">
+          <div class="feed" id="feed">
+            <div class="sig"><span>VP Sales joined from a customer</span><span class="k">job change</span></div>
+            <div class="sig"><span>Raised a Series B</span><span class="k">funding</span></div>
+            <div class="sig"><span>Hiring 3 SDRs</span><span class="k">hiring</span></div>
+            <div class="sig"><span>Added a new CRM</span><span class="k">tech stack</span></div>
+          </div>
+          <div class="feed-out"><span>signal</span><i></i><span>rep alerted</span></div>
+        </div>
+      </article>
+
+      <article class="feat">
+        <div>
+          <span class="label">Data quality · Clay waterfalls</span>
+          <h3>CRM data that stays fresh</h3>
+          <p>B2B contact data goes stale by roughly 4% every month as people change jobs and companies change. <strong>I re-enrich accounts every quarter through waterfall enrichment</strong> across Apollo, ZoomInfo and Sales Navigator, with normalized company names so updates never turn into duplicates.</p>
+          <span class="result">60%+ less manual prospect research</span>
+          <div class="tools"><span>Clay</span><span>Apollo</span><span>ZoomInfo</span><span>Sales Navigator</span></div>
+        </div>
+        <div class="fig c">
+          <svg class="chart" id="chart" viewBox="0 0 360 180" role="img" aria-label="Chart: data accuracy falls about 4 percent a month; quarterly re-enrichment resets it each quarter, versus steady decay to about 61 percent after a year">
+            <line class="grid" x1="40" y1="20" x2="345" y2="20"/><line class="grid" x1="40" y1="85" x2="345" y2="85"/><line class="grid" x1="40" y1="150" x2="345" y2="150"/>
+            <text x="34" y="24" text-anchor="end">100%</text><text x="34" y="89" text-anchor="end">75%</text><text x="34" y="154" text-anchor="end">50%</text>
+            <text x="40" y="170" text-anchor="middle">mo 0</text><text x="115" y="170" text-anchor="middle">3</text><text x="190" y="170" text-anchor="middle">6</text><text x="265" y="170" text-anchor="middle">9</text><text x="340" y="170" text-anchor="middle">12</text>
+            <path class="draw" style="--len:330" d="M40 20 L65 30.4 L90 40.3 L115 49.9 L140 59.3 L165 68.1 L190 76.4 L215 84.7 L240 92.5 L265 99.8 L290 107.1 L315 114.1 L340 120.6" fill="none" stroke="#c9b3a2" stroke-width="2.5" stroke-dasharray="5 5"/>
+            <path class="draw" style="--len:420" d="M40 20 L65 30.4 L90 40.3 L115 49.9 L115 20 L140 30.4 L165 40.3 L190 49.9 L190 20 L215 30.4 L240 40.3 L265 49.9 L265 20 L290 30.4 L315 40.3 L340 49.9" fill="none" stroke="#ef8a4c" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="340" cy="120.6" r="4" fill="#c9b3a2"/><text x="336" y="138" text-anchor="end">~61%</text>
+            <circle cx="340" cy="49.9" r="4.5" fill="#ef8a4c"/><text x="336" y="66" text-anchor="end">~88%+</text>
+          </svg>
+          <div class="legend"><span><i style="background:var(--apricot)"></i>re-enriched quarterly</span><span><i style="background:#c9b3a2"></i>never refreshed</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="more">
+      <article class="mini">
+        <span class="label">Conversation data · Gong</span>
+        <h3>Reps who listen more, close more</h3>
+        <p>I analyzed rep talk patterns in Gong and found a link between listening ratio and closed-won deals: reps who listened more and stayed specific to the customer's needs won more often.</p>
+        <div class="bars" id="bars">
+          <div class="bar-l"><span>talk-heavy rep</span><span>fewer wins</span></div>
+          <div class="bar"><i class="talk" style="width:68%"></i><i class="listen" style="width:32%"></i></div>
+          <div class="bar-l"><span>listen-heavy rep</span><span>more closed-won</span></div>
+          <div class="bar"><i class="talk" style="width:38%"></i><i class="listen" style="width:62%"></i></div>
+        </div>
+        <span class="mono" style="font-size:11px;color:var(--muted)">illustrative split</span>
+      </article>
+      <article class="mini">
+        <span class="label">Orchestration · n8n</span>
+        <h3>One system instead of five tabs</h3>
+        <p>Connected Clay enrichment, CRM sync and multi-channel sequencing in n8n, with Python and webhook-triggered API calls where native integrations stop.</p>
+        <span class="result" style="margin-top:auto">10+ hours saved weekly</span>
+      </article>
+      <article class="mini">
+        <span class="label">Deliverability</span>
+        <h3>Emails that land in the inbox</h3>
+        <p>Built and monitored outbound infrastructure in Smartlead and Instantly, with SPF, DKIM and DMARC set up properly across high-volume client sends.</p>
+        <span class="result" style="margin-top:auto">95%+ inbox placement</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-head"><div><span class="label">where I've worked</span><h2>Experience</h2></div></div>
+    <div class="xp">
+      <div class="job">
+        <div><div class="when">Mar 2025 – now</div><div class="where">Remote</div></div>
+        <div><h3>Belkins</h3><div class="title">GTM Engineer</div>
+          <ul>
+            <li>Built multi-step Clay enrichment and waterfall sourcing for ICP targeting and account scoring, cutting manual prospect research by 60%+.</li>
+            <li>Built intent and signal workflows that took time-to-first-touch from days to under an hour.</li>
+            <li>Architected HubSpot and Salesforce systems, including custom objects, lead routing and lifecycle automation, cutting lead response time by 40%+.</li>
+            <li>Built internal AI tools for sales and marketing, including the context agent and a shared content workspace.</li>
+          </ul></div>
       </div>
-    </section>
-
-    <!-- ======= 02 / THE LEDGER ======= -->
-    <section class="section" id="ledger">
-      <div class="section-head">
-        <span class="section-no serif reveal">02</span>
-        <div class="section-title-wrap reveal">
-          <h2 class="serif">The ledger.</h2>
-          <p class="section-sub">Numbers, not adjectives. Each line audited by an actual pipeline.</p>
-        </div>
+      <div class="job">
+        <div><div class="when">Jun 2024 – Jan 2025</div><div class="where">Austin, TX</div></div>
+        <div><h3>Intake.com</h3><div class="title">Founding GTM Engineer · first growth hire</div>
+          <ul>
+            <li>Rebuilt the ICP and scoring from scratch, and showed stakeholders why a precise ICP list mattered. Earlier campaigns had been aimed at the wrong accounts.</li>
+            <li>Built the full Clay workflow, from generating the ICP list to waterfall enrichment and normalized names that prevent duplicates.</li>
+            <li>Launched omnichannel campaigns in Marketo, and moved quickly to new campaigns when one wasn't working.</li>
+            <li>Used Claude to design targeted campaigns and AI to create personalized creative, cutting content turnaround by about 50%.</li>
+          </ul></div>
       </div>
-
-      <div class="ledger">
-        <div class="ledger-row reveal">
-          <span class="ledger-num serif">11<i>%</i></span>
-          <p class="ledger-desc">reply rate, up from 3% in three months. GPU &amp; cloud infrastructure client — one deep ICP, researched relevancy over raw volume.</p>
-          <span class="ledger-tag mono">BELKINS</span>
-        </div>
-        <div class="ledger-row reveal">
-          <span class="ledger-num serif">13<i>%</i></span>
-          <p class="ledger-desc">reply rate, up from under 4% in ten weeks. LLM-personalized outreach wired directly into the outbound workflow.</p>
-          <span class="ledger-tag mono">INTAKE</span>
-        </div>
-        <div class="ledger-row reveal">
-          <span class="ledger-num serif">+40<i>%</i></span>
-          <p class="ledger-desc">organic pipeline contribution over twelve months, across eight simultaneous B2B SaaS clients.</p>
-          <span class="ledger-tag mono">GROWTHSPREE</span>
-        </div>
-        <div class="ledger-row reveal">
-          <span class="ledger-num serif">5<i>wks</i></span>
-          <p class="ledger-desc">from day one to the first fully automated outbound workflow, as the founding GTM hire. No playbook existed. Wrote it.</p>
-          <span class="ledger-tag mono">INTAKE</span>
-        </div>
-        <div class="ledger-row reveal">
-          <span class="ledger-num serif">6<i>×</i></span>
-          <p class="ledger-desc">a two-person team operating at the output of six — matched accounts detected, enriched, and routed into personalized outreach with no human in the loop.</p>
-          <span class="ledger-tag mono">SYSTEMS</span>
-        </div>
+      <div class="job">
+        <div><div class="when">Jul 2022 – Dec 2023</div><div class="where">New Delhi, India</div></div>
+        <div><h3>GrowthSpree</h3><div class="title">Product Marketing Analyst</div>
+          <ul>
+            <li>Delivered go-to-market plans for several B2B SaaS clients at once, turning founder goals into campaign briefs measured on pipeline, not traffic.</li>
+          </ul></div>
       </div>
-    </section>
+    </div>
+    <div class="edu">
+      <div><b>Midwestern State University</b><span>MBA, Business Analytics</span></div>
+      <div><b>RVR &amp; JC College of Engineering</b><span>Bachelor's, Electrical and Electronics Engineering</span></div>
+    </div>
+  </section>
 
-    <!-- ======= 03 / SHIPPING LOG ======= -->
-    <section class="section" id="ships">
-      <div class="section-head">
-        <span class="section-no serif reveal">03</span>
-        <div class="section-title-wrap reveal">
-          <h2 class="serif">The shipping log.</h2>
-          <p class="section-sub">Tools built so teams get leverage without headcount. Hover a line — everything I ship has more under the hood.</p>
-        </div>
+  <!-- TOOLKIT -->
+  <section id="toolkit">
+    <div class="sec-head"><div><span class="label">what I build with</span><h2>Toolkit</h2></div></div>
+    <div class="kit">
+      <div class="group"><span class="label">Data + enrichment</span><div class="chips"><span>Clay</span><span>Apollo</span><span>ZoomInfo</span><span>Sales Navigator</span><span>Waterfalls</span></div></div>
+      <div class="group"><span class="label">CRM + automation</span><div class="chips"><span>Salesforce</span><span>HubSpot</span><span>Marketo</span><span>n8n</span><span>Make</span><span>Zapier</span></div></div>
+      <div class="group"><span class="label">AI</span><div class="chips"><span>Claude API</span><span>ChatGPT API</span><span>Agents</span><span>Prompt Builder</span></div></div>
+      <div class="group"><span class="label">Signals + ABM</span><div class="chips"><span>Bombora</span><span>Koala</span><span>RB2B</span><span>Account scoring</span></div></div>
+      <div class="group"><span class="label">Outbound + sales</span><div class="chips"><span>Outreach</span><span>Salesloft</span><span>Smartlead</span><span>Instantly</span><span>Gong</span></div></div>
+      <div class="group"><span class="label">Technical</span><div class="chips"><span>Python</span><span>REST APIs</span><span>Webhooks</span><span>JSON</span><span>SPF / DKIM / DMARC</span></div></div>
+    </div>
+  </section>
+
+  <!-- BEYOND -->
+  <section>
+    <div class="sec-head"><div><span class="label">off the clock</span><h2>Beyond the day job</h2></div></div>
+    <div class="beyond">
+      <div class="b-card x"><span class="badge">NYC · June 6</span><h3>One of 50 builders</h3><p>Picked for Profound's Marketing Engineering Hackathon in New York. It was 5x oversubscribed, so every seat was earned. A day of marketing engineers building in real time.</p></div>
+      <div class="b-card y"><div class="orbit"><b></b></div><h3>Claudians of the Galaxy</h3><p>An unofficial community I created for people who build with Claude, with a gallery where members share their builds. Motto: you don't need superpowers to save the world.</p><a href="https://claudians.com/" target="_blank" rel="noopener" style="font:500 13px var(--mono);color:var(--sage-ink);margin-top:auto">claudians.com ↗</a></div>
+      <div class="b-card z"><span class="badge">internal tool</span><h3>AI Content Workspace</h3><p>One shared place for marketers to plan, create and save work, keeping the brand voice consistent across the team.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding-bottom:40px">
+    <div class="contact">
+      <div>
+        <span class="label" style="color:#b9aba2">say hello</span>
+        <h2 style="margin-top:8px">Let's get your product to the <em>right people</em>.</h2>
+        <p>I'm always up for talking about GTM systems, signals and AI workflows.</p>
       </div>
-
-      <div class="ships">
-        <article class="ship reveal">
-          <span class="ship-no mono">N°01</span>
-          <div class="ship-body">
-            <h3 class="serif">AgentReady</h3>
-            <p>Audits how a brand's content performs when ChatGPT, Claude, or Perplexity answer questions about it — GEO/AEO applied to a live agent-evaluation problem. Built at Profound's Marketing Engineering Hackathon.</p>
-          </div>
-          <span class="ship-tag mono">PROFOUND HACKATHON</span>
-        </article>
-        <article class="ship reveal">
-          <span class="ship-no mono">N°02</span>
-          <div class="ship-body">
-            <h3 class="serif">Content Ops Platform</h3>
-            <p>One shared space to draft, edit, and publish across channels — with a brand-voice file the AI checks every single generation against. On-brand by construction, not by review.</p>
-          </div>
-          <span class="ship-tag mono">SHIPPED AT BELKINS</span>
-        </article>
-        <article class="ship reveal">
-          <span class="ship-no mono">N°03</span>
-          <div class="ship-body">
-            <h3 class="serif">CRM Context Engine</h3>
-            <p>Pulls and summarizes full account history automatically, so reps walk into every call prepared instead of digging through records. Context, delivered before it's needed.</p>
-          </div>
-          <span class="ship-tag mono">SHIPPED AT BELKINS</span>
-        </article>
-        <article class="ship reveal">
-          <span class="ship-no mono">N°04</span>
-          <div class="ship-body">
-            <h3 class="serif">Ad Spend Sentinel</h3>
-            <p>An LLM agent that watches ad performance against a goal, pauses underperforming spend on its own, and posts a Slack note on where the budget should go instead. Money that defends itself.</p>
-          </div>
-          <span class="ship-tag mono">SHIPPED AT INTAKE</span>
-        </article>
+      <div class="lines">
+        <div class="line-row"><span class="label">Email</span><span class="v" id="email">saimudragada1012@gmail.com</span><button class="copy" id="copy" type="button">Copy</button></div>
+        <div class="line-row"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/saimudragada" target="_blank" rel="noopener">in/saimudragada</a></div>
+        <div class="line-row"><span class="label">Based in</span><span class="v">Kansas City Metro</span></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ======= 04 / SERVICE RECORD ======= -->
-    <section class="section" id="record">
-      <div class="section-head">
-        <span class="section-no serif reveal">04</span>
-        <div class="section-title-wrap reveal">
-          <h2 class="serif">Service record.</h2>
-          <p class="section-sub">Zero-to-one, more than once.</p>
-        </div>
-      </div>
+  <footer><span>© 2026 Sai Mudragada</span><span class="mono">signal → enrich → score → route → reach out</span></footer>
+</div>
 
-      <div class="record">
-        <article class="rec-item reveal">
-          <div class="rec-when"><span class="rec-year serif">'25</span><span class="mono rec-now">— NOW</span></div>
-          <div class="rec-body">
-            <h3>AI GTM Engineer · Belkins</h3>
-            <p>Own the technical GTM systems behind outbound and ABM across multiple B2B clients. Built the full signal-to-CRM pipeline — intent signals into Clay waterfall enrichment into HubSpot, with dedupe and upsert logic. Partner directly with sales on MEDDIC; pull warehouse data with SQL and shape it with Python when exports aren't enough.</p>
-          </div>
-        </article>
-        <article class="rec-item reveal">
-          <div class="rec-when"><span class="rec-year serif">'24</span></div>
-          <div class="rec-body">
-            <h3>Founding GTM Engineer · Intake (Mise)</h3>
-            <p>First GTM hire at a GrowX-backed startup. Defined the ICP across three buyer segments, shipped the first automated outbound workflow in five weeks, wired the ChatGPT API into outreach, ran Google + Meta paid with six message angles under test — and built the agent that watched the spend.</p>
-          </div>
-        </article>
-        <article class="rec-item reveal">
-          <div class="rec-when"><span class="rec-year serif">'22</span></div>
-          <div class="rec-body">
-            <h3>Product Marketing Analyst · GrowthSpree</h3>
-            <p>Content and demand gen for eight B2B SaaS clients at once. CAC/LTV tracking across paid and organic, +40% organic pipeline in twelve months, and end-to-end GTM for five product launches.</p>
-          </div>
-        </article>
-      </div>
+<script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const onView = (el, fn, th=.4) => {
+    if(!el || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ fn(); io.disconnect(); } }), {threshold:th});
+    io.observe(el);
+  };
 
-      <p class="creds mono reveal">CLAUDE 101, ANTHROPIC &nbsp;·&nbsp; POWER BI PL-300, MICROSOFT &nbsp;·&nbsp; MBA BUSINESS ANALYTICS &nbsp;·&nbsp; B.E. ELECTRICAL &amp; ELECTRONICS</p>
-    </section>
+  /* hero pipeline */
+  const pipe = document.getElementById('pipe'), nodes = [...pipe.querySelectorAll('.node')], out = document.getElementById('routed');
+  let leads = [], last = 0, acc = 0, reached = 0;
+  const centers = () => nodes.map(n => n.offsetTop + n.offsetHeight/2);
+  const ping = i => { nodes[i].classList.add('ping'); setTimeout(() => nodes[i].classList.remove('ping'), 420); };
+  function frame(t){
+    const dt = Math.min(50, t - (last || t)); last = t; acc += dt;
+    if(acc > 1600){ acc = 0; const el = document.createElement('span'); const fit = Math.random() > .3;
+      el.className = 'lead' + (fit ? '' : ' cold'); pipe.appendChild(el); leads.push({el, y: centers()[0] - 26, fit, p: -1, done: false}); }
+    const c = centers();
+    leads.forEach(L => {
+      if(L.done) return;
+      L.y += dt * .055; L.el.style.top = L.y + 'px';
+      const i = L.p + 1;
+      if(i < c.length && L.y >= c[i]){
+        L.p = i; ping(i);
+        if(i === 2 && !L.fit){ L.done = true; L.el.classList.add('out'); setTimeout(() => L.el.remove(), 600); }
+        else if(i === c.length - 1){ L.done = true; out.textContent = ++reached; L.el.style.opacity = 0; setTimeout(() => L.el.remove(), 450); }
+      }
+    });
+    leads = leads.filter(L => L.el.isConnected);
+    if(!document.hidden) requestAnimationFrame(frame); else last = 0;
+  }
+  if(!reduce){ requestAnimationFrame(frame); document.addEventListener('visibilitychange', () => { if(!document.hidden){ last = 0; requestAnimationFrame(frame); } }); }
+  else out.textContent = '24';
 
-    <!-- ======= 05 / THE WORDS ======= -->
-    <section class="section" id="words">
-      <div class="section-head">
-        <span class="section-no serif reveal">05</span>
-        <div class="section-title-wrap reveal">
-          <h2 class="serif">The words.</h2>
-          <p class="section-sub">Systems deliver the message. Writing makes it land. Content and automation are the same discipline — right message, right person, right moment — and I refuse to outsource either half.</p>
-        </div>
-      </div>
+  /* count-up numbers */
+  onView(document.getElementById('nums'), () => {
+    if(reduce) return;
+    document.querySelectorAll('#nums b[data-to]').forEach(b => {
+      const to = +b.dataset.to, suf = b.dataset.suf; let v = 0; const step = Math.max(1, Math.round(to/24));
+      const t = setInterval(() => { v = Math.min(to, v + step); b.textContent = v + suf; if(v >= to) clearInterval(t); }, 35);
+    });
+  });
 
-      <figure class="poster-wrap reveal">
-        <div class="poster">
-          <span class="tape tape-tl" aria-hidden="true"></span>
-          <span class="tape tape-br" aria-hidden="true"></span>
-          <p class="poster-copy serif">The world changed<br/>how it finds things.<br/>We&rsquo;ll make sure<br/>they find you.</p>
-          <p class="poster-brand mono">◒ Profound</p>
-        </div>
-        <figcaption class="mono">FIG. 2 — SPEC BILLBOARD FOR PROFOUND. UNCOMMISSIONED. I JUST LIKED THE PROBLEM.</figcaption>
-      </figure>
+  /* agent typing */
+  const agent = document.getElementById('agent');
+  onView(agent, () => { if(reduce) return; agent.classList.add('is-typing'); setTimeout(() => agent.classList.remove('is-typing'), 1400); }, .6);
 
-      <ul class="words-list">
-        <li class="reveal"><span class="serif">Ad scripts &amp; campaign concepts</span><span class="mono">SPEC + SHIPPED</span></li>
-        <li class="reveal"><span class="serif">GEO &amp; AEO content — writing that wins AI answers</span><span class="mono">FOR PROFOUND</span></li>
-        <li class="reveal"><span class="serif">LinkedIn &amp; long-form brand content</span><span class="mono">ONGOING</span></li>
-        <li class="reveal"><span class="serif">Email &amp; nurture sequences</span><span class="mono">FULL FUNNEL</span></li>
-      </ul>
-    </section>
+  /* signal feed highlight */
+  const sigs = [...document.querySelectorAll('#feed .sig')];
+  if(!reduce){ let k = 0; setInterval(() => { sigs.forEach(s => s.classList.remove('on')); sigs[k % sigs.length].classList.add('on'); k++; }, 1500); }
 
-    <!-- ======= 06 / CONTACT ======= -->
-    <section class="section contact" id="contact">
-      <div class="contact-inner">
-        <span class="stamp mono reveal" aria-hidden="true">OPEN<br/>TO WORK</span>
-        <h2 class="serif contact-title reveal">Got a distribution<br/>problem? <em>Good.</em></h2>
-        <p class="contact-sub reveal">If growth at your company still runs on manual, tedious process — that's exactly the moment I like to show up. Let's replace it with something that runs on its own, and actually works.</p>
-        <a class="contact-email serif reveal" href="mailto:saimudragada1012@gmail.com">saimudragada1012@gmail.com</a>
-        <p class="contact-alt mono reveal"><a href="https://linkedin.com/in/saimudragada" target="_blank" rel="noopener">LINKEDIN ↗</a></p>
-      </div>
-    </section>
+  /* chart draw */
+  const chart = document.getElementById('chart');
+  onView(chart, () => { if(!reduce) chart.classList.add('drawing'); }, .5);
 
-  </main>
+  /* gong bars grow */
+  const bars = document.getElementById('bars');
+  onView(bars, () => {
+    if(reduce) return;
+    const is = [...bars.querySelectorAll('.bar i')]; const w = is.map(i => i.style.width);
+    is.forEach(i => { i.style.transition = 'none'; i.style.width = '50%'; });
+    bars.getBoundingClientRect();
+    requestAnimationFrame(() => is.forEach((i, n) => { i.style.transition = ''; i.style.width = w[n]; }));
+  }, .6);
 
-  <footer class="footer mono">
-    <span>© 2026 SAI MUDRAGADA</span>
-    <span class="hide-sm">SET IN FRAUNCES, ARCHIVO &amp; PLEX MONO</span>
-    <span>NO TEMPLATE WAS USED. OR HARMED.</span>
-  </footer>
+  /* copy email */
+  const btn = document.getElementById('copy'), email = document.getElementById('email');
+  btn.addEventListener('click', () => {
+    const ok = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1500); };
+    const fb = () => { const r = document.createRange(); r.selectNodeContents(email); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(email.textContent).then(ok, fb); else fb();
+  });
+})();
+</script>
 
-  <script src="script.js"></script>
 </body>
 </html>
